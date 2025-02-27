@@ -96,6 +96,28 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
+/* ------------------------ ANIMATIONS ------------------------ */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 /* ------------------------ 1. HOMEPAGE OVERALL ------------------------ */
 * {
     margin: 0;
@@ -134,7 +156,7 @@ body {
     padding: 4rem 15%;
     padding-left: 8rem;
     padding-right: 8rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.9);
     background-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -213,7 +235,9 @@ span{
     box-shadow: 0 0 25px white, 0 0 30px rgb(223, 8, 155) , 0 0 35px rgb(223, 8, 155) ;
 }
 
-// section - main page informations
+
+/* ------------------------ 1. MAIN HOMEPAGE : SECTION INFORMATION &------------------------ */
+//
 section {
     min-height: 100vh;
     padding: 10rem 15%;
@@ -224,53 +248,26 @@ section {
     align-items: center;
     justify-content: center;
     gap: 15rem;
-    margin-top: 25vh;
+    margin-top: 25vh;  
 }
 
-// Animations
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-300px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.8;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-
+/* -------- A. Left - Home Content -------- */
 .home-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
 }
 
+/* ----- Text Content ----- */
 .home-content h1{
-    /*animation-name: slideInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;*/
+    /*animation: slideInLeft, 1s, ease-in;*/
     animation: appear 0.3s linear;
     font-size: 8rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
-}
-
-.home-content h3{
-  animation: appear 0.5s linear;
-    margin: 1rem 0;
-    font-size: 4rem;
 }
 
 .home-content p{
@@ -280,19 +277,95 @@ section {
     line-height: 1.8;
 }
 
-
-.home-image img {
+/* ----- Text Animation : Typing Effect ----- */
+.text-animation {
   animation: appear 0.5s linear;
-  width: 25vw;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgb(223, 8, 155);
-  transition: box-shadow 0.4s ease-in-out; /* Apply transition to box-shadow */
+  font-size: 4rem;
+  font-weight: 600;
+  min-width: 380px;
 }
 
-.home-image img:hover {
-  box-shadow: 0 0 25px rgb(223, 8, 155), 0 0 50px rgb(223, 8, 155), 0 0 100px rgb(223, 8, 155);
+.text-animation span{
+  position: relative;
 }
 
+.text-animation span::before{
+  content: "Software Engineer";
+  color: linear-gradient(
+        270deg,
+        purple 1%,
+        rgb(223, 8, 155) 100%
+    );
+  animation: words 20s infinite;
+}
+
+.text-animation span::after{
+  content: "";
+  background-color:  #080808;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #080808;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+  to {
+    border-left: 2px solid rgb(223, 8, 155);
+  }
+}
+
+@keyframes words{
+  0%,
+  20% {
+    content: "Software Engineer";
+  }
+  21%,
+  40% {
+    content: "Web Developer";
+  }
+  41%,
+  60% {
+    content: "Frontend Designer";
+  }
+  61%,
+  80% {
+    content: "Full-stack Engineer";
+  }
+  81%,
+  100% {
+    content: "UI/UX Designer";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+/* ----- Social Media ----- */
 .social-icons a {
   animation: appear 0.9s linear;
   display: inline-flex;
@@ -315,6 +388,7 @@ section {
   box-shadow: 0 0 25px rgb(223, 8, 155);
 }
 
+/* ----- BTN-GROUP: RESUME & CONTACT ME ----- */
 .btn-group {
   display: flex;
   gap: 1.5rem;
@@ -333,9 +407,9 @@ section {
   transition: 0.3s ease-in-out;
 }
 
-
+/* ----- My Resume ----- */
 .btn-group a:nth-of-type(1){
-  animation: appear 0.5s linear;
+  animation: appear 1s linear;
   background-color:   color: rgb(223, 8, 155);
   color: white;
   border: 2px solid rgb(223, 8, 155);
@@ -349,9 +423,9 @@ section {
     color: white;
 }
 
-
+/* ----- Contact ----- */
 .btn-group a:nth-of-type(2){
-  animation: appear 0.5s linear;
+  animation: appear 1s linear;
   background-color: black;
   color: rgb(223, 8, 155);
   border: 2px solid rgb(223, 8, 155);
@@ -363,3 +437,19 @@ section {
   background-color: rgb(223, 8, 155);
   color: white;
 }
+
+/* -------- B. Right - Home Content -------- */
+.home-image img {
+  animation: appear 1s linear;
+  width: 25vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgb(223, 8, 155);
+  transition: box-shadow 0.4s ease-in-out; /* Apply transition to box-shadow */
+}
+
+.home-image img:hover {
+  box-shadow: 0 0 25px rgb(223, 8, 155), 0 0 50px rgb(223, 8, 155), 0 0 100px rgb(223, 8, 155);
+}
+
+
+
