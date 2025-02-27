@@ -1,4 +1,4 @@
-
+/* ------------------------ FONT ------------------------ */
   /* latin-ext */
   @font-face {
     font-family: 'Poppins';
@@ -96,6 +96,7 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
+/* ------------------------ 1. HOMEPAGE OVERALL ------------------------ */
 * {
     margin: 0;
     padding: 0;
@@ -110,20 +111,21 @@ html {
     overflow-x: hidden;
 }
 
-// colors variables
-:root {
-    --bg-color: #080808; 
-    --second-bg-color: #101010;
-    --text-color: white;
-    --main-color: #e415ff;
-}
-
 body {
     background-color: #080808;
     color: white;
 }
 
+/* colors variables
+:root {
+  --bg-color: #080808; 
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #e415ff;
+}*/
 
+
+/* ------------------------ 2. HEADER ------------------------ */
 .header{
     position: fixed;
     width: 100%;
@@ -140,12 +142,14 @@ body {
     z-index: 1000;
 }
 
+/* -------- a. MENU ICON -------- */
 #menu-icon {
     font-size: 3.5rem;
     color:  #e415ff;
     display: none;
 }
 
+/* -------- b. LOGO : RACHEL HO  -------- */
 .logo{
     font-size: 3rem;
     color: white;
@@ -158,6 +162,7 @@ body {
     transform: scale(1.1);
 }
 
+/* -------- c. SPAN TEXT : blend pink & purple  -------- */
 span{
     background: linear-gradient(
         270deg,
@@ -166,10 +171,11 @@ span{
     );
     background-clip: text;
     color: transparent;
-   // text-shadow: 0 0 25px var(--main-color);
+    /*text-shadow: 0 0 25px rgb(223, 8, 155) , 0 0 30px rgb(223, 8, 155) , 0 0 35px rgb(223, 8, 155) ;
+    text-shadow: 0 0 25px var(rgb(223, 8, 155));*/
 }
 
-
+/* -------- d. NAVIGATION BAR : HOME, ABOUT ME, EDUCATION, EXPERIENCE, PROJECTS, CONTACT -------- */
 .navbar a{
     font-size: 1.8rem;
     color: white;
@@ -184,6 +190,7 @@ span{
     border-bottom: 3px solid #e415ff;
 }
 
+/* -------- e. GRADIENT : CONTACT ME -------- */
 .gradient-btn {
     font-size: 1.8rem;
     padding: 1rem 2rem;
@@ -217,9 +224,10 @@ section {
     align-items: center;
     justify-content: center;
     gap: 15rem;
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 
+// Animations
 @keyframes slideInLeft {
   from {
     transform: translateX(-300px);
@@ -229,6 +237,18 @@ section {
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
 .home-content {
     display: flex;
     flex-direction: column;
@@ -237,11 +257,10 @@ section {
 }
 
 .home-content h1{
-    // animation
-    animation-name: slideInLeft;
+    /*animation-name: slideInLeft;
     animation-duration: 1s;
-    animation-timing-function: ease-in;
-
+    animation-timing-function: ease-in;*/
+    animation: appear 0.3s linear;
     font-size: 8rem;
     font-weight: 700;
     margin-top: 1.5rem;
@@ -249,12 +268,13 @@ section {
 }
 
 .home-content h3{
-    
+  animation: appear 0.5s linear;
     margin: 1rem 0;
     font-size: 4rem;
 }
 
 .home-content p{
+  animation: appear 0.7s linear;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
@@ -262,6 +282,7 @@ section {
 
 
 .home-image img {
+  animation: appear 0.5s linear;
   width: 25vw;
   border-radius: 50%;
   box-shadow: 0 0 25px rgb(223, 8, 155);
@@ -273,6 +294,7 @@ section {
 }
 
 .social-icons a {
+  animation: appear 0.9s linear;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -291,4 +313,53 @@ section {
   background-color: rgb(223, 8, 155);
   transform: scale(1.2)translateY(-5px);
   box-shadow: 0 0 25px rgb(223, 8, 155);
+}
+
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: rgb(223, 8, 155);
+  box-shadow: 0 0 25px rgb(223, 8, 155);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+
+.btn-group a:nth-of-type(1){
+  animation: appear 0.5s linear;
+  background-color:   color: rgb(223, 8, 155);
+  color: white;
+  border: 2px solid rgb(223, 8, 155);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(1):hover{
+    box-shadow: 0 0 25px rgb(223, 8, 155);
+    background-color: rgb(223, 8, 155);
+    
+    color: white;
+}
+
+
+.btn-group a:nth-of-type(2){
+  animation: appear 0.5s linear;
+  background-color: black;
+  color: rgb(223, 8, 155);
+  border: 2px solid rgb(223, 8, 155);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover{
+  box-shadow: 0 0 25px rgb(223, 8, 155);
+  background-color: rgb(223, 8, 155);
+  color: white;
 }
