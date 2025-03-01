@@ -118,6 +118,19 @@
   }
 }
 
+/* ------------------------ SCROLL BARS ------------------------ */
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(223, 8, 155);
+}
+
+::-webkit-scrollbar-track{
+  background-color: #080808; 
+}
+
 /* ------------------------ 1. HOMEPAGE OVERALL ------------------------ */
 * {
     margin: 0;
@@ -138,13 +151,13 @@ body {
     color: white;
 }
 
-/* colors variables
+/* colors variables*/
 :root {
   --bg-color: #080808; 
   --second-bg-color: #101010;
   --text-color: white;
   --main-color: #e415ff;
-}*/
+}
 
 
 /* ------------------------ 2. HEADER ------------------------ */
@@ -249,6 +262,7 @@ section {
     justify-content: center;
     gap: 15rem;
     margin-top: 25vh;  
+    margin-bottom: 30vh;
 }
 
 /* -------- A. Left - Home Content -------- */
@@ -263,10 +277,10 @@ section {
 /* ----- Text Content ----- */
 .home-content h1{
     /*animation: slideInLeft, 1s, ease-in;*/
+    margin-top: 1.5rem;
     animation: appear 0.3s linear;
     font-size: 8rem;
     font-weight: 700;
-    margin-top: 1.5rem;
     line-height: 1;
 }
 
@@ -452,4 +466,183 @@ section {
 }
 
 
+/* ------------------------ 2. ABOUT ME ------------------------ */
 
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: #101010;
+  padding: 10vh 10vh 10vh 10vh;
+}
+
+.about-img img{
+  width: 25vw;
+  border-radius: 100%;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  box-shadow: 0 0 25px rgb(223, 8, 155);
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover{
+  box-shadow: 0 0 25px rgb(223, 8, 155),
+              0 0 50px rgb(223, 8, 155);
+              0 0 100px rgb(223, 8, 155);
+}
+
+.about-content {
+  padding-right: 5vh;
+  flex: 1; /* Makes both sections take up equal space */
+  max-width: 50%; /* Prevents "About Me" from taking too much space */
+  height: 100%;
+}
+
+.about-content h2 {
+  font-size: 7rem;
+  text-align: left;
+}
+
+.about-content h4 {
+  color: linear-gradient(
+        270deg,
+        purple 1%,
+        rgb(223, 8, 155) 100%
+    );
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.about-content p {
+  margin-top: 2vh;
+  font-size: 1.8rem;
+}
+
+.about-content .btn {
+  margin-top: 3rem 0; 
+}
+
+.highlight {
+  color: rgb(223, 8, 155);
+  font-weight: bold;
+}
+
+.heading1{
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 4px;
+  margin-bottom: 50px;
+}
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.radial-bars .radial-bar{
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.radial-bars .radial-bar svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar{
+  stroke-width: 10;
+  stroke:  rgb(30, 30, 30);
+  fill: transparent;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+  100%{
+    stroke-dashoffset: -1; 
+  }
+}
+
+.path{
+  stroke-width: 10;
+  stroke:  rgb(223, 8, 155);
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+  100%{
+    stroke-dashoffset: 62.83;
+  }
+}
+
+@keyframes animate-path2{
+  100%{
+    stroke-dashoffset: 125.66;
+  }
+}
+
+@keyframes animate-path3{
+  100%{
+    stroke-dashoffset: 94.25;
+  }
+} 
+
+@keyframes animate-path4{
+  100%{
+    stroke-dashoffset: 62.83;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;  
+  }
+  to {
+    opacity: 1;  
+  }
+}
+
+.radial-bar .percentage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: showText 0.5 1s linear forwards;
+}
+
+
+.radial-bar .text{
+  font-size: 1.8rem;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-weight: 500;
+  opacity: 0;
+  animation: showText 0.5 1s linear forwards;
+}
+  
