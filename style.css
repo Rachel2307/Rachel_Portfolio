@@ -120,7 +120,7 @@
 
 /* ------------------------ SCROLL BARS ------------------------ */
 ::-webkit-scrollbar{
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -156,7 +156,7 @@ body {
   --bg-color: #080808; 
   --second-bg-color: #101010;
   --text-color: white;
-  --main-color: #e415ff;
+  --main-color: rgb(223, 8, 155);
 }
 
 
@@ -180,7 +180,7 @@ body {
 /* -------- a. MENU ICON -------- */
 #menu-icon {
     font-size: 3.5rem;
-    color:  #e415ff;
+    color:  #rgb(223, 8, 155);
     display: none;
 }
 
@@ -220,9 +220,15 @@ span{
     border-bottom: 3px solid transparent;
 }
 
-.navbar a:hover {
+.navbar a:hover{
     color: rgb(223, 8, 155);
     border-bottom: 3px solid #e415ff;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: rgb(223, 8, 155);
+  display: none;
 }
 
 /* -------- e. GRADIENT : CONTACT ME -------- */
@@ -257,12 +263,11 @@ section {
 }
 
 .home {
+    padding: 210px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15rem;
-    margin-top: 25vh;  
-    margin-bottom: 30vh;
 }
 
 /* -------- A. Left - Home Content -------- */
@@ -469,12 +474,13 @@ section {
 /* ------------------------ 2. ABOUT ME ------------------------ */
 
 .about {
+  padding: 190px 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10rem;
   background: #101010;
-  padding: 10vh 10vh 10vh 10vh;
+  //padding: 10vh 10vh 10vh 10vh;
 }
 
 .about-img img{
@@ -646,3 +652,378 @@ section {
   animation: showText 0.5 1s linear forwards;
 }
   
+/* ------------------------ 3. EDUCATION ------------------------ */
+.heading {
+  font-size: 6rem;
+  text-align: center;
+  margin: 5rem 0;
+  // color: linear-gradient(270deg, purple 1%,rgb(223, 8, 155) 100% );
+}
+
+.education {
+  padding: 60px 15px;
+  background: #080808; 
+}
+
+.education h2{
+  margin-bottom: 5rem;
+}
+
+.timeline-items{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color:rgb(223, 8, 155);
+  left: calc(50% - 1px);
+} 
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even){
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot{
+  height: 21px;
+  width: 21px;
+  background-color: rgb(223, 8, 155);
+  box-shadow: 0 0 25px rgb(223, 8, 155),
+              0 0 50px rgb(223, 8, 155);
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.timeline-date{
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 6px 0 15px;
+}
+
+.timeline-content {
+  margin-left: 5vh;
+  margin-right: 5vh;
+  background-color:  #080808; 
+  border: 3px solid rgb(223, 8, 155);
+  padding: 30px 50px;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgb(223, 8, 155);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgb(223, 8, 155);
+}
+
+.timeline-content h3{
+  font-size: 2rem;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* ------------------------ 4. EXPERIENCE ------------------------ */
+.heading {
+  font-size: 6rem;
+  text-align: center;
+  margin: 5rem 0;
+  // color: linear-gradient(270deg, purple 1%,rgb(223, 8, 155) 100% );
+}
+
+.experience {
+  padding: 60px 15px;
+  background: #080808; 
+}
+
+.experience h2{
+  margin-bottom: 5rem;
+}
+
+.timeline-items{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items img{
+  width: 20%;
+  margin-top: 1.5vh;
+  max-width: 350px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+.timeline-items::before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color:rgb(223, 8, 155);
+  left: calc(50% - 1px);
+} 
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even){
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot{
+  height: 21px;
+  width: 21px;
+  background-color: rgb(223, 8, 155);
+  box-shadow: 0 0 25px rgb(223, 8, 155),
+              0 0 50px rgb(223, 8, 155);
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.timeline-date{
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin: 6px 0 15px;
+}
+
+.timeline-content {
+  margin-left: 5vh;
+  margin-right: 5vh;
+  background-color:  #080808; 
+  border: 3px solid rgb(223, 8, 155);
+  padding: 30px 50px;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgb(223, 8, 155);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-content .timeline-content-1 {
+  flex-direction: column;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgb(223, 8, 155);
+}
+
+.timeline-content h3{
+  font-size: 2rem;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* ------------------------ 5. PROJECTS ------------------------ */
+.projects{
+  padding-top: 7vh;
+  background-color: var(--bg-color);
+}
+
+.projects-box{
+  padding-left: 20vh;
+  padding-right: 20vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-items: center;
+  gap: 3rem;
+  row-gap: 5rem;
+}
+
+.project-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease;
+}
+
+.project-card:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: scale(1.08);
+}
+
+.project-card img{
+  max-width: 300px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+.project-card h3{
+  font-size: 3rem;
+}
+
+.project-card p{
+  font-size: 1.6rem;
+}
+/* ------------------------ 6. CONTACT ------------------------ */
+.contact{
+  padding-top: 10vh; 
+  padding-left: 30vh;
+  padding-right: 30vh;
+  padding-bottom: 5vh;
+  background-color: var(--second-bg-color);
+}
+
+.contact h2{
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.contact h3{
+  font-size: 2rem;
+  text-align: center;
+  color: grey;
+}
+
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact form .input-box input, 
+.contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+/* ----- Submit ----- */
+
+.submit-button {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: rgb(223, 8, 155);
+  box-shadow: 0 0 25px rgb(223, 8, 155);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  animation: appear 1s linear;
+  background-color:   color: rgb(223, 8, 155);
+  color: black;
+  border: 2px solid rgb(223, 8, 155);
+  box-shadow: 0 0 25px transparent;
+}
+
+.submit-button:hover{
+    box-shadow: 0 0 25px rgb(223, 8, 155);
+    background-color: rgb(223, 8, 155);
+}
+
+
+/* ------------------------ 7. FOOTER ------------------------ */
+.footer{
+  background-color: var(--bg-color);
+  padding: 20px 0;
+}
+
+.footer .social-icons{
+  text-align: center;
+}
+
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
