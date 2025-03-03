@@ -291,7 +291,8 @@ section {
 }
 
 .home-content p{
-  animation: appear 0.7s linear;
+  /*
+  animation: appear 0.7s linear;*/
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
@@ -478,7 +479,6 @@ section {
   padding-top: 140px;
   padding-left:15vh;
   padding-right:15vh;
-  padding-bottom: 8vh;
 }
 
 .about-content-1 {
@@ -667,7 +667,7 @@ section {
 
 .education {
   padding-top: 10vh;
-
+  padding-bottom: 10vh;
   color: black;
 }
 
