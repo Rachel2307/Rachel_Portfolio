@@ -147,7 +147,7 @@ html {
 }
 
 body {
-    background-color: #080808;
+    background-color:transparent;
     color: white;
 }
 
@@ -170,7 +170,7 @@ body {
     padding-left: 8rem;
     padding-right: 8rem;
     background: rgba(0, 0, 0, 0.9);
-    background-filter: blur(10px);
+    background-filter: blur(100px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -206,8 +206,6 @@ span{
     );
     background-clip: text;
     color: transparent;
-    /*text-shadow: 0 0 25px rgb(223, 8, 155) , 0 0 30px rgb(223, 8, 155) , 0 0 35px rgb(223, 8, 155) ;
-    text-shadow: 0 0 25px var(rgb(223, 8, 155));*/
 }
 
 /* -------- d. NAVIGATION BAR : HOME, ABOUT ME, EDUCATION, EXPERIENCE, PROJECTS, CONTACT -------- */
@@ -263,7 +261,10 @@ section {
 }
 
 .home {
-    padding: 210px 15px;
+    padding-top: 210px;
+    padding-bottom: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,15 +473,20 @@ section {
 
 
 /* ------------------------ 2. ABOUT ME ------------------------ */
-
 .about {
-  padding: 190px 15vh;
+  background: transparent;
+  padding-top: 140px;
+  padding-left:15vh;
+  padding-right:15vh;
+  padding-bottom: 8vh;
+}
+
+.about-content-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10rem;
-  background: #101010;
-  //padding: 10vh 10vh 10vh 10vh;
+  margin-bottom: 10vh;
 }
 
 .about-img img{
@@ -501,7 +507,7 @@ section {
 .about-content {
   padding-right: 5vh;
   flex: 1; /* Makes both sections take up equal space */
-  max-width: 50%; /* Prevents "About Me" from taking too much space */
+  max-width: 100%; /* Prevents "About Me" from taking too much space */
   height: 100%;
 }
 
@@ -661,8 +667,8 @@ section {
 
 .education {
   padding-top: 10vh;
-  background-color: var(--bg-color);
-  color: black
+
+  color: black;
 }
 
 .education h2{
@@ -692,10 +698,10 @@ section {
 }
 
 .education-box:hover{
-  background: var(--second-bf-color);
+  background: #080808;
   color: var(--main-color);
   border: 5px solid var(--main-color);
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .education-info{
@@ -740,7 +746,6 @@ section {
 
 .experience {
   padding: 60px 15px;
-  background: #080808; 
 }
 
 .experience h2{
@@ -851,7 +856,7 @@ section {
 /* ------------------------ 5. PROJECTS ------------------------ */
 .projects{
   padding-top: 7vh;
-  background-color: var(--bg-color);
+
 }
 
 .projects-box{
@@ -905,7 +910,6 @@ section {
   padding-left: 30vh;
   padding-right: 30vh;
   padding-bottom: 5vh;
-  background-color: var(--second-bg-color);
 }
 
 .contact h2{
@@ -969,8 +973,8 @@ section {
 
 /* ------------------------ 7. FOOTER ------------------------ */
 .footer{
-  background-color: var(--bg-color);
-  padding: 20px 0;
+  background-color: var(--second-bg-color);
+  padding: 10px 0;
 }
 
 .footer .social-icons{
@@ -999,6 +1003,7 @@ section {
 
 .footer .copyright{
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   font-size: 16px;
 }

@@ -5,42 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
     <!-- BOXICONS FONTS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/> 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> -->
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"> 
-
   </head>
   <body>
-    <!-- -------------------- 1. HEADER------------------------ -->
-    <header class="header">
-        <a href="#home" class="logo">Rachel
-            <span>Ho</span>
-        </a>
-        <!-- <i class='bx bx-menu'></i> -->
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about" class="active">About Me</a>
-            <a href="#education" class="active">Education</a>
-            <a href="#experience" class="active">Experience</a>
-            <a href="#projects" class="active">Projects</a>
-            <a href="#contact" class="active">Contact</a>
-        </nav>
-        <a href="https://www.linkedin.com/in/ngoc-thanh-uyen-ho/" target="_blank"> 
-            <button class = "gradient-btn">My Linkedin</button>
-        </a>   
-        <!-- 
-        <div class="social-icons">
-            <a href="https://github.com/Rachel2307" target="_blank"> 
-                <i class="bx bxl-github"></i>
+        <!-- -------------------- BACKGROUND ANIMATION ------------------------ -->
+        <section class="wrapper">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+        </section>
+
+        <!-- -------------------- 1. HEADER------------------------ -->
+        <header class="header">
+            <a href="#home" class="logo">Rachel
+                <span>Ho</span>
             </a>
+            <!-- <i class='bx bx-menu'></i> -->
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about" class="active">About Me</a>
+                <a href="#education" class="active">Education</a>
+                <a href="#experience" class="active">Experience</a>
+                <a href="#projects" class="active">Projects</a>
+                <a href="#contact" class="active">Contact</a>
+            </nav>
             <a href="https://www.linkedin.com/in/ngoc-thanh-uyen-ho/" target="_blank"> 
-                <i class="bx bxl-linkedin-square"></i>
-            </a>
-            </a>
-        </div> -->
-    </header> 
+                <button class = "gradient-btn">My Linkedin</button>
+            </a>   
+        </header> 
 
     <!-- -------------------- 1. MAIN HOMEPAGE ------------------------ -->
     <section class="home" id="home">
@@ -78,21 +73,26 @@
         <div class="home-image">
             <img src="home-profile.png">
         </div>
+
     </section>
     
     <!-- -------------------- 2. ABOUT ME ------------------------ -->      
     <section class="about" id="about">
-        <div class="about-content">
-            <h2>About<span>Me</span></h2>
-            <h4>Full-Stack Developer</h4>
-            <p>
-                I am a <span class="highlight">third-year Computer Science </span> student at <span class="highlight">The University of Adelaide</span>, passionate about 
-                <span class="highlight">software engineering</span> and <span class = "highlight"> collaborative problem-solving</span>. With a strong foundation in algorithms, data structures, and system design, 
-                I am eager to deepen my expertise in backend development and software architecture.
-                I am actively <span class="highlight">seeking internship opportunities</span>  to gain hands-on experience, collaborate on 
-                innovative projects, and contribute to initiatives that push the boundaries of technology.
-            </p>
+        <div class="about-content-1">
+            <div class="about-content">
+                <h2>About<span>Me</span></h2>
+                <h4>Full-Stack Developer</h4>
+                <p>
+                    I am a <span class="highlight">third-year Computer Science </span> student at <span class="highlight">The University of Adelaide</span>, passionate about 
+                    <span class="highlight">software engineering</span> and <span class = "highlight"> collaborative problem-solving</span>. With a strong foundation in algorithms, data structures, and system design, 
+                    I am eager to deepen my expertise in backend development and software architecture.
+                    I am actively <span class="highlight">seeking internship opportunities</span>  to gain hands-on experience, collaborate on 
+                    innovative projects, and contribute to initiatives that push the boundaries of technology.
+                </p>
+            </div>
         </div>
+
+        <div class="about-content-1">
             <!-- Proffesional Radial bars -->
             <div class="about-content">
                 <h1 class="heading1">Professional Skills</h1>
@@ -135,6 +135,69 @@
                     </div>        
                 </div>
             </div>
+
+            <!-- Technical Radial bars -->
+            <div class="about-content">
+                <h1 class="heading1">Technical Skills</h1>
+                <div class="radial-bars">
+                    <div class="social-icons">
+                        <a href="" target="_blank"> 
+                            <i class="bx bxl-html5"></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-css3'></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-tailwind-css' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-javascript' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-react' ></i>
+                        </a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-c-plus-plus' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-python' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-typescript'></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-netlify'></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-docker' ></i>
+                        </a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-visual-studio' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-php' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-angular' ></i>
+                        </a>
+                        <a href="" target="_blank"> 
+                            <i class='bx bxl-nodejs' ></i>
+                        </a>
+                        <a href="" target="_blank">  
+                            <i class='bx bxl-vuejs' ></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    
+               
     </section>
 
 
@@ -162,6 +225,12 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- -------------------- BACKGROUND ANIMATION ------------------------ -->
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
     </section>
 
     <!-- -------------------- 4. EXPERIENCE ------------------------ -->
